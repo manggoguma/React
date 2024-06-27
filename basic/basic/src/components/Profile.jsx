@@ -1,16 +1,14 @@
 import React from 'react';
+import Avartar from './Avartar';
 
-export default function Profile() {
+export default function Profile({image,name,title,isNew}) {
     return (
         <div className='profile'>
-            <img 
-            className='photo'
-            src="https://i.namu.wiki/i/3snVTLdFU3J74NdAImAj9rcGrZzZxZnkcwEDXZb4ntmQCq8yjhpEXmmP3A4v33LuaUIkaTGMwZOXRPU85dwykg.webp" 
-            alt="newjeans" 
-            />
-            <h1>NewJeans</h1>
-            <p>k-pop singer</p>
+            <Avartar image={image} isNew={isNew} />
+            <h1>{name}</h1>
+            <p>{title}</p>
         </div>
+        
     );
 }
 
